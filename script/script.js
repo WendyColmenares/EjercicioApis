@@ -35,7 +35,7 @@ getMovies(API_URL)
 const showMovies = (movies) => {
     main.innerHTML = ''
     movies.forEach(movie => {
-        const{image,name, species, episode,origin,gender} = movie
+        const{image,name, species,gender,origin,status} = movie
         const movieDiv = document.createElement('div')
         movieDiv.classList.add('movie')
         movieDiv.innerHTML =`
@@ -45,9 +45,9 @@ const showMovies = (movies) => {
             <span class="green">${species}</span>
         </div>
         <div class = "overview">
-        <h3>Estado : ${gender}</h3>
+        <h3>Estado : ${status}</h3>
         <h3>Genero : ${gender}</h3>
-        <h3>Genero : ${gender}</h3>
+        <h3>Origen : ${origin}</h3>
         
     </div>
         `
